@@ -2,40 +2,22 @@
 
 int main()
 {
-    int side1, side2, side3;
-
-    /* Input three sides of a triangle */
-    printf("Enter three sides of triangle: \n");
-    scanf("%d%d%d", &side1, &side2, &side3);
-    
-    if((side1 + side2) > side3)
-    {
-        if((side2 + side3) > side1)
-        {
-            if((side1 + side3) > side2) 
-            {
-                /*
-                 * If side1 + side2 > side3 and
-                 *    side2 + side3 > side1 and
-                 *    side1 + side3 > side2 then
-                 * the triangle is valid.
-                 */
-                printf("Triangle is valid.");
-            }
-            else
-            {
-                printf("Triangle is not valid.");
-            }
-        }
-        else
-        {
-            printf("Triangle is not valid.");
-        }
-    }
-    else
-    {
-        printf("Triangle is not valid.");
-    }
-
-    return 0;
+   int a, b, c, P;
+   printf("a = ");
+   scanf("%d", &a);
+   printf("b = ");
+   scanf("%d", &b);
+   printf("c = ");
+   scanf("%d", &c);
+   int notValid = a <= 0 || 
+   b <= 0 || c <= 0 || (a + c) <=
+   b || (a + b) <= c || (b + c) <= a;
+   if (notValid)
+   {
+      printf("Invalid triangle\n");
+      return 1;
+   }
+   P = a + b + c;
+   printf("P = %d\n", P);
+   return 0;
 }
