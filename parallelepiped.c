@@ -14,8 +14,8 @@ int main()
     return 1;
     }
     S = 2 * (a * c + b * c);
-    printf("The parallelepiped's area is %.2f!\n", S);
     V = a * b * c;
+    printf("The parallelepiped's area is %.2f!\n", S);
     printf("The parallelepiped's volume is %.2f!\n", V);
     return 0;
 }
